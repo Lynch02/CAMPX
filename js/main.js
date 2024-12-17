@@ -146,6 +146,33 @@ function sendWhatsApp() {
   }
 }
 
+function sendWhatsApp2() {
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const subject = document.getElementById("subject").value;
+  const msg = document.getElementById("msg").value;
+
+  const message =
+    `Nama: ${name}\n` +
+    `Email: ${email}\n` +
+    `Subject: ${subject}\n` +
+    `Message:\n"${msg}"`;
+
+  const encodedMessage = encodeURIComponent(message);
+  const phoneNumber = "6281563245618";
+
+  if (!name || !email || !subject || !msg) {
+    alert("Harus Mengisi Keterangan");
+    return false;
+  } else {
+    alert("Form Berhasil Dikirim!");
+    // Kirim form (opsional, bisa sesuaikan dengan backend Anda)
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${encodedMessage}`,
+      "_blank"
+    );
+  }
+}
 // // Ambil semua elemen dengan class .quantity-control
 // document.querySelectorAll(".quantity-control").forEach((control) => {
 //   // Tombol kurang, tambah, dan input jumlah
