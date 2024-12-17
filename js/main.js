@@ -146,24 +146,24 @@ function sendWhatsApp() {
   }
 }
 
-// Ambil semua elemen dengan class .quantity-control
-document.querySelectorAll(".quantity-control").forEach((control) => {
-  // Tombol kurang, tambah, dan input jumlah
-  const decreaseBtn = control.querySelector(".btn-decrease");
-  const increaseBtn = control.querySelector(".btn-increase");
-  const quantityInput = control.querySelector(".quantity-input");
+// // Ambil semua elemen dengan class .quantity-control
+// document.querySelectorAll(".quantity-control").forEach((control) => {
+//   // Tombol kurang, tambah, dan input jumlah
+//   const decreaseBtn = control.querySelector(".btn-decrease");
+//   const increaseBtn = control.querySelector(".btn-increase");
+//   const quantityInput = control.querySelector(".quantity-input");
 
-  // Event untuk tombol kurang
-  decreaseBtn.addEventListener("click", () => {
-    let currentValue = parseInt(quantityInput.value); // Ambil nilai sekarang
-    if (currentValue > 0) {
-      quantityInput.value = currentValue - 1; // Kurangi nilai
-    }
-  });
+//   // Event untuk tombol kurang
+//   decreaseBtn.addEventListener("click", () => {
+//     let currentValue = parseInt(quantityInput.value); // Ambil nilai sekarang
+//     if (currentValue > 0) {
+//       quantityInput.value = currentValue - 1; // Kurangi nilai
+//     }
+//   });
 
-  // Event untuk tombol tambah
-  increaseBtn.addEventListener("click", () => {
-    let currentValue = parseInt(quantityInput.value); // Ambil nilai sekarang
-    quantityInput.value = currentValue + 1; // Tambah nilai
-  });
-});
+//   // Event untuk tombol tambah
+//   increaseBtn.addEventListener("click", () => {
+//     let currentValue = parseInt(quantityInput.value); // Ambil nilai sekarang
+//     quantityInput.value = currentValue + 1; // Tambah nilai
+//   });
+// });
