@@ -113,25 +113,37 @@
 })(jQuery);
 
 function sendWhatsApp() {
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const phone = document.getElementById('phone').value;
-  const date = document.getElementById('date').value;
-  const items = document.getElementById('items').value;
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value;
+  const date = document.getElementById("date").value;
+  const items = document.getElementById("items").value;
 
-  const message = `*Hallo kak saya mau pesan*\n` +
-                  `Nama: ${name}\n` +
-                  `Email: ${email}\n` +
-                  `Telepon: ${phone}\n` +
-                  `Tanggal/Jam: ${date}\n` +
-                  `List of Items: ${items}\n\n`+
-                  `*Lokasi Toko*\n` +
-                  `https://maps.app.goo.gl/3ttJeC8zQ2FZGsow8\n`;
-                  
+  const message =
+    `*Hallo kak saya mau pesan*\n` +
+    `Nama: ${name}\n` +
+    `Email: ${email}\n` +
+    `Telepon: ${phone}\n` +
+    `Tanggal/Jam: ${date}\n` +
+    `List of Items:\n` +
+    `${items}\n\n` +
+    `*Lokasi Toko*\n` +
+    `https://maps.app.goo.gl/3ttJeC8zQ2FZGsow8\n`;
+
   const encodedMessage = encodeURIComponent(message);
   const phoneNumber = "6281563245618";
 
-  window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+  if (!name || !email || !date || !phone || !items) {
+    alert("Harus Mengisi Keterangan");
+    return false;
+  } else {
+    alert("Form Berhasil Dikirim!");
+    // Kirim form (opsional, bisa sesuaikan dengan backend Anda)
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${encodedMessage}`,
+      "_blank"
+    );
+  }
 }
 
 // Ambil semua elemen dengan class .quantity-control

@@ -141,7 +141,7 @@
                 type="button"
                 class="btn-play"
                 data-bs-toggle="modal"
-                data-src="https://www.youtube.com/embed/DWRcNpR6Kdc"
+                data-src="img/vid/2.mp4"
                 data-bs-target="#videoModal"
               >
                 <span></span>
@@ -155,7 +155,7 @@
               >
                 Reservation
               </h5>
-              <h1 class="text-white mb-4">Book A Table Online</h1>
+              <h1 class="text-white mb-4">Booking Now!</h1>
               <form>
                 <div class="row g-3">
                   <div class="col-md-6">
@@ -199,12 +199,13 @@
                   </div>
                   <div class="col-md-6">
                     <div class="form-floating">
-                      <select class="form-select" id="select1">
-                        <option value="1">People 1</option>
-                        <option value="2">People 2</option>
-                        <option value="3">People 3</option>
-                      </select>
-                      <label for="select1">No Of People</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        placeholder="Your Name"
+                      />
+                      <label for="name">Phone Number</label>
                     </div>
                   </div>
                   <div class="col-12">
@@ -215,7 +216,7 @@
                         id="message"
                         style="height: 100px"
                       ></textarea>
-                      <label for="message">Special Request</label>
+                      <label for="message">List Of Items</label>
                     </div>
                   </div>
                   <div class="col-12">
@@ -240,7 +241,9 @@
         <div class="modal-dialog">
           <div class="modal-content rounded-0">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Youtube Video</h5>
+              <h5 class="modal-title" id="exampleModalLabel">
+                Leader List Video
+              </h5>
               <button
                 type="button"
                 class="btn-close"
