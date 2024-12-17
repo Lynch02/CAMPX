@@ -165,6 +165,7 @@
                         class="form-control"
                         id="name"
                         placeholder="Your Name"
+                        required
                       />
                       <label for="name">Your Name</label>
                     </div>
@@ -176,6 +177,7 @@
                         class="form-control"
                         id="email"
                         placeholder="Your Email"
+                        required
                       />
                       <label for="email">Your Email</label>
                     </div>
@@ -189,10 +191,11 @@
                       <input
                         type="text"
                         class="form-control datetimepicker-input"
-                        id="datetime"
+                        id="date"
                         placeholder="Date & Time"
                         data-target="#date3"
                         data-toggle="datetimepicker"
+                        required
                       />
                       <label for="datetime">Date & Time</label>
                     </div>
@@ -202,8 +205,9 @@
                       <input
                         type="text"
                         class="form-control"
-                        id="name"
-                        placeholder="Your Name"
+                        id="phone"
+                        placeholder="number"
+                        required
                       />
                       <label for="name">Phone Number</label>
                     </div>
@@ -213,14 +217,19 @@
                       <textarea
                         class="form-control"
                         placeholder="Special Request"
-                        id="message"
+                        id="items"
                         style="height: 100px"
+                        required
                       ></textarea>
                       <label for="message">List Of Items</label>
                     </div>
                   </div>
                   <div class="col-12">
-                    <button class="btn btn-primary w-100 py-3" type="submit">
+                    <button
+                      onclick="sendWhatsApp()"
+                      class="btn btn-primary w-100 py-3"
+                      type="submit"
+                    >
                       Book Now
                     </button>
                   </div>
