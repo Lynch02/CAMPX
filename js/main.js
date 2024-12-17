@@ -111,8 +111,6 @@
     },
   });
 })(jQuery);
-<<<<<<< HEAD
-=======
 
 function sendWhatsApp() {
   const name = document.getElementById('name').value;
@@ -157,4 +155,3 @@ document.querySelectorAll(".quantity-control").forEach((control) => {
     quantityInput.value = currentValue + 1; // Tambah nilai
   });
 });
->>>>>>> 62b95f6 (update 4)
