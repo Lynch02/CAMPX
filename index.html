@@ -2,10 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Restoran - Bootstrap Restaurant Template</title>
+    <title>Campinx - Buys & Rent Tent</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="" name="keywords" />
-    <meta content="" name="description" />
+    <link rel="icon" href="img/tent.png" type="image/x-icon" />
+    <meta content="Sewa Tenda" name="keywords" />
+    <meta
+      content="Menjual dan menyewakan tenda dengan kualitas luarbiasa"
+      name="description"
+    />
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon" />
@@ -65,7 +69,10 @@
         <nav
           class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0"
         >
-          <a href="" class="navbar-brand p-0 d-flex align-items-center">
+          <a
+            href="index.html"
+            class="navbar-brand p-0 d-flex align-items-center"
+          >
             <img src="img/Logo.png" alt="Logo" class="logo" />
             <h1 class="text-primary m-0">
               <span class="CAMP">CAMPIN</span><span class="X">X</span>
@@ -85,7 +92,7 @@
               <a href="index.html" class="nav-item nav-link active">Home</a>
               <a href="about.html" class="nav-item nav-link">About</a>
               <a href="service.html" class="nav-item nav-link">Service</a>
-              <a href="menu.html" class="nav-item nav-link">Menu</a>
+              <a href="menu.html" class="nav-item nav-link">catalog</a>
               <div class="nav-item dropdown">
                 <a
                   href="#"
@@ -103,7 +110,9 @@
               </div>
               <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="" class="btn btn-primary py-2 px-4">Book A Table</a>
+            <a href="booking.html" class="btn btn-primary py-2 px-4"
+              >Booking Now</a
+            >
           </div>
         </nav>
 
@@ -115,16 +124,19 @@
                   MARI NIKMATI<br />KEINDAHAN <span class="X">ALAM</span>
                 </h1>
                 <p class="text-white animated slideInLeft mb-4 pb-2">
-                  Dengan alat camping yang nyaman dan harga terjangkau.
+                  Dengan alat camping yang nyaman, modern, dan berkualitas, kami
+                  siap menemani petualanganmu. Harga terjangkau, pengalaman tak
+                  tertandingi. Jelajahi dunia luar dengan perlengkapan terbaik
+                  karena setiap perjalanan adalah cerita yang berharga!
                 </p>
                 <a
-                  href=""
+                  href="menu.html"
                   class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft"
                   >LIHAT SEKARANG</a
                 >
               </div>
               <div class="col-lg-6 text-center text-lg-end overflow-hidden">
-                <!-- <img class="img-fluid" src="img/hero.png" alt=""> -->
+                <img class="img-fluid" src="img/hero.png" alt="" />
               </div>
             </div>
           </div>
@@ -254,7 +266,7 @@
                       class="flex-shrink-0 display-5 text-primary mb-0"
                       data-toggle="counter-up"
                     >
-                      15
+                      5
                     </h1>
                     <div class="ps-4">
                       <p class="mb-0">Years of</p>
@@ -270,7 +282,7 @@
                       class="flex-shrink-0 display-5 text-primary mb-0"
                       data-toggle="counter-up"
                     >
-                      50
+                      8
                     </h1>
                     <div class="ps-4">
                       <p class="mb-0">Location</p>
@@ -279,7 +291,9 @@
                   </div>
                 </div>
               </div>
-              <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
+              <a class="btn btn-primary py-3 px-5 mt-2" href="about.html"
+                >Read More</a
+              >
             </div>
           </div>
         </div>
@@ -883,6 +897,7 @@
                         class="form-control"
                         id="name"
                         placeholder="Your Name"
+                        required
                       />
                       <label for="name">Your Name</label>
                     </div>
@@ -894,6 +909,7 @@
                         class="form-control"
                         id="email"
                         placeholder="Your Email"
+                        required
                       />
                       <label for="email">Your Email</label>
                     </div>
@@ -907,10 +923,11 @@
                       <input
                         type="text"
                         class="form-control datetimepicker-input"
-                        id="datetime"
+                        id="date"
                         placeholder="Date & Time"
                         data-target="#date3"
                         data-toggle="datetimepicker"
+                        required
                       />
                       <label for="datetime">Date & Time</label>
                     </div>
@@ -920,8 +937,9 @@
                       <input
                         type="text"
                         class="form-control"
-                        id="name"
-                        placeholder="Your Name"
+                        id="phone"
+                        placeholder="number"
+                        required
                       />
                       <label for="name">Phone Number</label>
                     </div>
@@ -931,14 +949,19 @@
                       <textarea
                         class="form-control"
                         placeholder="Special Request"
-                        id="message"
+                        id="items"
                         style="height: 100px"
+                        required
                       ></textarea>
                       <label for="message">List Of Items</label>
                     </div>
                   </div>
                   <div class="col-12">
-                    <button class="btn btn-primary w-100 py-3" type="submit">
+                    <button
+                      onclick="sendWhatsApp()"
+                      class="btn btn-primary w-100 py-3"
+                      type="submit"
+                    >
                       Book Now
                     </button>
                   </div>
@@ -1173,12 +1196,12 @@
               <div class="d-flex align-items-center">
                 <img
                   class="img-fluid flex-shrink-0 rounded-circle"
-                  src="img/testimonial-1.jpg"
+                  src="img/nunucan.jpeg"
                   style="width: 50px; height: 50px"
                 />
                 <div class="ps-3">
-                  <h5 class="mb-1">Syifa</h5>
-                  <small>Mahasiswa</small>
+                  <h5 class="mb-1">Nunu Chan</h5>
+                  <small>Wibu Sejati</small>
                 </div>
               </div>
             </div>
@@ -1191,12 +1214,12 @@
               <div class="d-flex align-items-center">
                 <img
                   class="img-fluid flex-shrink-0 rounded-circle"
-                  src="img/testimonial-2.jpg"
+                  src="img/kujek.jpeg"
                   style="width: 50px; height: 50px"
                 />
                 <div class="ps-3">
-                  <h5 class="mb-1">Jojo</h5>
-                  <small>Pelajar</small>
+                  <h5 class="mb-1">Jek</h5>
+                  <small>Dosen</small>
                 </div>
               </div>
             </div>
@@ -1209,12 +1232,12 @@
               <div class="d-flex align-items-center">
                 <img
                   class="img-fluid flex-shrink-0 rounded-circle"
-                  src="img/testimonial-3.jpg"
+                  src="img/katip.jpeg"
                   style="width: 50px; height: 50px"
                 />
                 <div class="ps-3">
-                  <h5 class="mb-1">Umar</h5>
-                  <small>Pendaki</small>
+                  <h5 class="mb-1">Katip</h5>
+                  <small>Tukang Hiling</small>
                 </div>
               </div>
             </div>
@@ -1227,12 +1250,12 @@
               <div class="d-flex align-items-center">
                 <img
                   class="img-fluid flex-shrink-0 rounded-circle"
-                  src="img/testimonial-4.jpg"
+                  src="img/roy.jpeg"
                   style="width: 50px; height: 50px"
                 />
                 <div class="ps-3">
-                  <h5 class="mb-1">Mila</h5>
-                  <small>Pecinta Alam</small>
+                  <h5 class="mb-1">Roy</h5>
+                  <small>Mutan Terkuat</small>
                 </div>
               </div>
             </div>
@@ -1254,11 +1277,9 @@
               >
                 Company
               </h4>
-              <a class="btn btn-link" href="">About Us</a>
-              <a class="btn btn-link" href="">Contact Us</a>
-              <a class="btn btn-link" href="">Reservation</a>
-              <a class="btn btn-link" href="">Privacy Policy</a>
-              <a class="btn btn-link" href="">Terms & Condition</a>
+              <a class="btn btn-link" href="about.html">About Us</a>
+              <a class="btn btn-link" href="contact.html">Contact Us</a>
+              <a class="btn btn-link" href="booking.html">Booking</a>
             </div>
             <div class="col-lg-3 col-md-6">
               <h4
@@ -1277,17 +1298,17 @@
                 <i class="fa fa-envelope me-3"></i>campinx@hytamm.biz
               </p>
               <div class="d-flex pt-2">
-                <a class="btn btn-outline-light btn-social" href=""
-                  ><i class="fab fa-twitter"></i
+                <a
+                  class="btn btn-outline-light btn-social"
+                  href="https://www.instagram.com/campinx.id"
+                  target="_blank"
+                  ><i class="fab fa-instagram"></i
                 ></a>
-                <a class="btn btn-outline-light btn-social" href=""
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
-                <a class="btn btn-outline-light btn-social" href=""
-                  ><i class="fab fa-youtube"></i
-                ></a>
-                <a class="btn btn-outline-light btn-social" href=""
-                  ><i class="fab fa-linkedin-in"></i
+                <a
+                  class="btn btn-outline-light btn-social"
+                  href="https://wa.me/6281563245618"
+                  target="_blank"
+                  ><i class="fab fa-whatsapp"></i
                 ></a>
               </div>
             </div>
@@ -1313,19 +1334,6 @@
                 newsletter kami. Kami hadir untuk menemani setiap langkah
                 petualangan Anda dengan berbagai produk dan layanan terbaik.
               </p>
-              <div class="position-relative mx-auto" style="max-width: 400px">
-                <input
-                  class="form-control border-primary w-100 py-3 ps-4 pe-5"
-                  type="text"
-                  placeholder="Your email"
-                />
-                <button
-                  type="button"
-                  class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
-                >
-                  SignUp
-                </button>
-              </div>
             </div>
           </div>
         </div>
@@ -1333,20 +1341,17 @@
           <div class="copyright">
             <div class="row">
               <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                &copy; <a class="border-bottom" href="#">CAMPINX</a>, All Right
-                Reserved.
+                &copy; <a class="border-bottom" href="index.html">CAMPINX</a>,
+                All Right Reserved.
 
                 <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                 Designed By
-                <a class="border-bottom" href="https://instag">BodenGyuu</a>
-              </div>
-              <div class="col-md-6 text-center text-md-end">
-                <div class="footer-menu">
-                  <a href="">Home</a>
-                  <a href="">Cookies</a>
-                  <a href="">Help</a>
-                  <a href="">FQAs</a>
-                </div>
+                <a
+                  class="border-bottom"
+                  href="https://instagram.com/_radenginar"
+                  target="_blank"
+                  >HytammDev</a
+                >
               </div>
             </div>
           </div>

@@ -111,3 +111,86 @@
     },
   });
 })(jQuery);
+
+function sendWhatsApp() {
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value;
+  const date = document.getElementById("date").value;
+  const items = document.getElementById("items").value;
+
+  const message =
+    `*Hallo kak saya mau pesan*\n` +
+    `Nama: ${name}\n` +
+    `Email: ${email}\n` +
+    `Telepon: ${phone}\n` +
+    `Tanggal/Jam: ${date}\n` +
+    `List of Items:\n` +
+    `${items}\n\n` +
+    `*Lokasi Toko*\n` +
+    `https://maps.app.goo.gl/3ttJeC8zQ2FZGsow8\n`;
+
+  const encodedMessage = encodeURIComponent(message);
+  const phoneNumber = "6281563245618";
+
+  if (!name || !email || !date || !phone || !items) {
+    alert("Harus Mengisi Keterangan");
+    return false;
+  } else {
+    alert("Form Berhasil Dikirim!");
+    // Kirim form (opsional, bisa sesuaikan dengan backend Anda)
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${encodedMessage}`,
+      "_blank"
+    );
+  }
+}
+
+function sendWhatsApp2() {
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const subject = document.getElementById("subject").value;
+  const msg = document.getElementById("msg").value;
+
+  const message =
+    `Nama: ${name}\n` +
+    `Email: ${email}\n` +
+    `Subject: ${subject}\n` +
+    `Message:\n"${msg}"`;
+
+  const encodedMessage = encodeURIComponent(message);
+  const phoneNumber = "6281563245618";
+
+  if (!name || !email || !subject || !msg) {
+    alert("Harus Mengisi Keterangan");
+    return false;
+  } else {
+    alert("Form Berhasil Dikirim!");
+    // Kirim form (opsional, bisa sesuaikan dengan backend Anda)
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${encodedMessage}`,
+      "_blank"
+    );
+  }
+}
+// // Ambil semua elemen dengan class .quantity-control
+// document.querySelectorAll(".quantity-control").forEach((control) => {
+//   // Tombol kurang, tambah, dan input jumlah
+//   const decreaseBtn = control.querySelector(".btn-decrease");
+//   const increaseBtn = control.querySelector(".btn-increase");
+//   const quantityInput = control.querySelector(".quantity-input");
+
+//   // Event untuk tombol kurang
+//   decreaseBtn.addEventListener("click", () => {
+//     let currentValue = parseInt(quantityInput.value); // Ambil nilai sekarang
+//     if (currentValue > 0) {
+//       quantityInput.value = currentValue - 1; // Kurangi nilai
+//     }
+//   });
+
+//   // Event untuk tombol tambah
+//   increaseBtn.addEventListener("click", () => {
+//     let currentValue = parseInt(quantityInput.value); // Ambil nilai sekarang
+//     quantityInput.value = currentValue + 1; // Tambah nilai
+//   });
+// });
