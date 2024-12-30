@@ -104,7 +104,6 @@
               </div>
               <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="" class="btn btn-primary py-2 px-4">Book A Table</a>
           </div>
         </nav>
 
@@ -280,7 +279,9 @@
                   </div>
                 </div>
               </div>
-              <a class="btn btn-primary py-3 px-5 mt-2" href="about.html">Read More</a>
+              <a class="btn btn-primary py-3 px-5 mt-2" href="about.html"
+                >Read More</a
+              >
             </div>
           </div>
         </div>
@@ -939,7 +940,11 @@
                     </div>
                   </div>
                   <div class="col-12">
-                    <button onclick="sendWhatsApp()" class="btn btn-primary w-100 py-3" type="submit">
+                    <button
+                      onclick="sendWhatsApp()"
+                      class="btn btn-primary w-100 py-3"
+                      type="submit"
+                    >
                       Book Now
                     </button>
                   </div>
@@ -1321,23 +1326,25 @@
                   placeholder="Your email"
                 />
                 <button
-                type="button"
-                class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
-                id="signupButton"
-              >
-                SignUp
-              </button>
-              
-              <script>
-                // Ambil tombol berdasarkan ID
-                const signupButton = document.getElementById("signupButton");
-              
-                // Tambahkan event listener untuk navigasi
-                signupButton.addEventListener("click", () => {
-                  window.open("https://myaccount.google.com/?hl=in&pli=1", "_blank");
-                });
-              </script>
-              
+                  type="button"
+                  class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
+                  id="signupButton"
+                >
+                  SignUp
+                </button>
+
+                <script>
+                  // Ambil tombol berdasarkan ID
+                  const signupButton = document.getElementById("signupButton");
+
+                  // Tambahkan event listener untuk navigasi
+                  signupButton.addEventListener("click", () => {
+                    window.open(
+                      "https://myaccount.google.com/?hl=in&pli=1",
+                      "_blank"
+                    );
+                  });
+                </script>
               </div>
             </div>
           </div>
